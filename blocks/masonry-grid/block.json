@@ -1,0 +1,185 @@
+{
+
+	"apiVersion"  : 2,
+	"name"        : "combine-social-photos/masonry-grid",
+	"title"       : "[Beta] Instagram - Masonry Grid",
+	"category"    : "still-be",
+	"description" : "Embed Instagram posts in a masonry layout. This is a Beta block.",
+	"keywords"    : [ "stillbe", "still-be", "instagram", "ig", "feed", "masonry", "grid" ],
+	"textdomain"  : "still-be-combine-social-photos",
+
+	"editorScript": "combine-social-photos-masonry-grid-editor",
+	"script"      : [ "combine-social-photos-common-class", "combine-social-photos-masonry-grid-layout" ],
+	"viewScript"  : "combine-social-photos-common-front",
+	"editorStyle" : [ "combine-social-photos-masonry-grid-style", "combine-social-photos-masonry-grid-editor" ],
+	"style"       : [ "combine-social-photos-masonry-grid-style", "combine-social-photos-common-front" ],
+
+	"attributes": {
+
+		"id" : {
+			"type"    : "number",
+			"default" : 0
+		},
+
+		"gettingType" : {
+			"type"    : "string",
+			"enum"    : [ "own", "business_discovery", "hashtag_recent", "hashtag_top" ],
+			"default" : "own"
+		},
+		"businessDiscovery" : {
+			"type"    : "string",
+			"default" : ""
+		},
+		"hashtag" : {
+			"type"    : "string",
+			"default" : ""
+		},
+		"hashtagId" : {
+			"type"    : "string",
+			"default" : ""
+		},
+
+		"displayingVideo" : {
+			"type"    : "string",
+			"enum"    : [ "thumbnail", "ignore", "autoplay" ],
+			"default" : "thumbnail"
+		},
+
+		"outlineGap" : {
+			"type"    : "string",
+			"default" : "0.5em"
+		},
+		"outlineGapTablet" : {
+			"type"    : "string",
+			"default" : "0.5em"
+		},
+		"outlineGapSp" : {
+			"type"    : "string",
+			"default" : "0.5em"
+		},
+
+		"mediaCount" : {
+			"type"    : "number",
+			"default" : 10
+		},
+
+		"loadingEffect" : {
+			"type"    : "string",
+			"enum"    : [ "none", "fadein", "fadein-up" ],
+			"default" : "fadein-up"
+		},
+
+		"columnWidthMax" : {
+			"type"    : "number",
+			"default" : 360
+		},
+
+		"gap" : {
+			"type"    : "string",
+			"default" : "1em"
+		},
+		"gapTablet" : {
+			"type"    : "string",
+			"default" : "1em"
+		},
+		"gapSp" : {
+			"type"    : "string",
+			"default" : "0.5em"
+		},
+
+		"hasOutlineShadow" : {
+			"type"    : "boolean",
+			"default" : true
+		},
+
+		"linkTarget" : {
+			"type"    : "string",
+			"default" : "_blank"
+		},
+
+		"isShowAuthor" : {
+			"type"    : "boolean",
+			"default" : false
+		},
+		"isShowTime" : {
+			"type"    : "boolean",
+			"default" : true
+		},
+
+		"isShowHeader" : {
+			"type"    : "boolean",
+			"default" : true
+		},
+		"headerPosition" : {
+			"type"    : "string",
+			"default" : "center"
+		},
+
+		"isShowFooter" : {
+			"type"    : "boolean",
+			"default" : true
+		},
+		"footerPosition" : {
+			"type"    : "string",
+			"default" : "center"
+		},
+
+		"isShowCaption" : {
+			"type"    : "boolean",
+			"default" : false
+		},
+		"captionHeightMax" : {
+			"type"    : "string",
+			"default" : "64em"
+		},
+
+		"isShowFollows" : {
+			"type"    : "boolean",
+			"default" : true
+		},
+		"isShowFollowers" : {
+			"type"    : "boolean",
+			"default" : true
+		},
+
+		"isShowImpressions" : {
+			"type"    : "boolean",
+			"default" : true
+		},
+
+		"hoverEffectBlur" : {
+			"type"    : "boolean",
+			"default" : true
+		},
+		"hoverEffectTilt" : {
+			"type"    : "boolean",
+			"default" : true
+		}
+
+	},
+
+	"supports" : {
+		"anchor" : true,
+		"align"  : true
+	},
+
+	"styles" : [
+		{
+			"name"      : "default",
+			"label"     : "Default",
+			"isDefault" : true
+		},
+		{
+			"name"      : "simple",
+			"label"     : "Simple",
+			"isDefault" : false
+		}
+	],
+
+	"example" : {
+		"attributes" : {
+			"id": 1
+		}
+	}
+
+}
